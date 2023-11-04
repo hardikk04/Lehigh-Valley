@@ -25,6 +25,17 @@ body::-webkit-scrollbar-thumb {
 .main {
   position: relative;
   width: 100%;
+  overflow: hidden;
+}
+
+.loder {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #171616;
+  z-index: 9;
 }
 
 .page1 {
@@ -69,6 +80,8 @@ nav > h6 {
   width: 60%;
   line-height: 0.9;
   margin-top: 2vw;
+  position: relative;
+  z-index: 10;
 }
 
 .nav-right > h3 {
@@ -309,9 +322,10 @@ nav > h6 {
 }
 
 .page3-right-text > h1 {
-  font-weight: 500;
+  font-weight: 400;
   line-height: 0.9;
   margin-top: 1vw;
+  width: 90%;
 }
 
 .page3-right-text > h6 {
@@ -363,7 +377,123 @@ nav > h6 {
 
 .page4 {
   position: relative;
-  height: 100vh;
+  height: 30vh;
   width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: end;
   background-color: #fff;
+}
+
+.page4-text {
+  width: 50%;
+}
+
+.page4-text > h6 {
+  font-weight: 600;
+  color: #000;
+}
+
+.page4-text > h1 {
+  font-weight: 500;
+  color: #000;
+  width: 65%;
+  line-height: 1;
+  margin-top: 2vw;
+}
+
+.scroller {
+  display: flex;
+  background-color: #fff;
+  padding-top: 8vw;
+  padding-bottom: 6vw;
+  overflow: hidden;
+}
+
+.scroller-box {
+  display: flex;
+  animation: scroller 30s linear infinite both;
+  /* gap: 8vw; */
+}
+
+.scroller-box > img {
+  height: 2vw;
+  margin-left: 12vw;
+}
+
+@keyframes scroller {
+  from {
+    transform: translate(0);
+  }
+  to {
+    transform: translateX(calc(-100% - 4px));
+  }
+}
+
+.page5 {
+  position: relative;
+  background-color: #171616;
+  height: 90vh;
+  width: 100%;
+}
+
+.page5-dets {
+  padding: 10vw;
+}
+
+.page5-dets > h6 {
+  font-weight: 600;
+}
+
+.page5-dets > h1 {
+  font-weight: 400;
+  width: 70%;
+  line-height: 1.1;
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+}
+
+.contact {
+  display: flex;
+  margin-top: 4vw;
+}
+
+.contact-elem {
+  width: 30%;
+}
+
+.contact-elem > h6 {
+  font-weight: 600;
+  font-size: 0.7vw;
+}
+
+.contact-elem > h3 {
+  font-weight: 400;
+  font-size: 1vw;
+  margin-top: 1.5vw;
+  width: 65%;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 6vw;
+}
+
+footer > h6 {
+  font-weight: 400;
+  opacity: 0.5;
+  font-size: 0.7vw;
+}
+
+.footer-right {
+  display: flex;
+  gap: 1vw;
+}
+
+.footer-right > h6 {
+  font-weight: 400;
+  opacity: 0.5;
+  font-size: 0.7vw;
 }

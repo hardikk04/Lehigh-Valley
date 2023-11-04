@@ -625,3 +625,68 @@ videoOverlay.addEventListener("mouseenter", () => {
 videoOverlay.addEventListener("mouseleave", () => {
   videoOverlay.style.opacity = 0;
 });
+
+var t1 = gsap.timeline();
+t1.from(".main-heading > h1", { opacity: 0, y: 50, delay: 0.5 })
+  .to(".loder", { top: "100vh", ease: "power3.inOut", duration: 1 })
+  .to(".loder", { scale: 0 })
+  .from(["nav", ".main-heading > h3"], { opacity: 0 });
+
+gsap.from([".page2>.page2-left", ".page2>.page2-right"], {
+  opacity: 0,
+  stagger: 0.5,
+  scrollTrigger: {
+    scroller: "body",
+    trigger: ".page2",
+    scrub: 1,
+    start: "top 50%",
+    end: "top 10%",
+  },
+});
+
+gsap.from(".page3-right-text", {
+  opacity: 0,
+  y: 50,
+  scrollTrigger: {
+    scroller: "body",
+    trigger: ".page3",
+    scrub: 1,
+    start: "top 60%",
+    end: "top 30%",
+  },
+});
+
+gsap.from([".page3-left-img1", ".page3-right-video"], {
+  opacity: 0,
+  stagger: 0.5,
+  scrollTrigger: {
+    scroller: "body",
+    trigger: ".page3",
+    scrub: 1,
+    start: "top 50%",
+    end: "top 0%",
+  },
+});
+
+gsap.from(".page3-left-img2", {
+  opacity: 0,
+  scrollTrigger: {
+    scroller: "body",
+    trigger: ".page3-left-img2",
+    scrub: 1,
+    start: "top 70%",
+    end: "top 40%",
+  },
+});
+
+gsap.from(".page5-dets", {
+  opacity: 0,
+  y: 50,
+  scrollTrigger: {
+    scroller: "body",
+    trigger: ".page5-dets",
+    scrub: 1,
+    start: "top 50%",
+    end: "top 20%",
+  },
+});
